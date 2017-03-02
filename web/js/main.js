@@ -2,7 +2,7 @@
  * Ajax request to things
  */
 function refresh() {
-  $.get("http://127.0.0.1:8080/lights/1/", function(data) {
+  $.get("http://localhost:3000/lights/1/", function(data) {
       $("#light-status").html("ON");
       $("#off").hide();
       $("#on").show();
