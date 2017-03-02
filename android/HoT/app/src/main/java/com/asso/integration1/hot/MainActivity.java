@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.asso.integration1.hot.utils.NetworkCallback;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements NetworkCallback {
 
     private TextView statusText;
     private Button statusButton;
+    private ImageView statusImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements NetworkCallback {
 
         statusText = (TextView) findViewById(R.id.statusTextView);
         statusButton = (Button) findViewById(R.id.statusButton);
+        statusImage = (ImageView) findViewById(R.id.statusImageView);
 
         statusButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,11 +51,13 @@ public class MainActivity extends AppCompatActivity implements NetworkCallback {
                 @Override
                 public void run() {
                     if(response) {
-                        statusText.setText("STATUS_ON_TEXT");
+                        statusText.setText(STATUS_ON_TEXT);
                         statusText.setTextColor(Color.GREEN);
+                        statusImage.setImageResource(R.drawable.lighton);
                     } else {
-                        statusText.setText("STATUS_OFF_TEXT");
+                        statusText.setText(STATUS_OFF_TEXT);
                         statusText.setTextColor(Color.RED);
+                        statusImage.setImageResource(R.drawable.lightoff);
                     }
                 }
             });
