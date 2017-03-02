@@ -1,0 +1,24 @@
+
+/* Content panel */
+.row {
+    margin-top: 30px;
+}
+
+.content {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Lights */
+.lamp {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Update button */
+.update {
+  display: inline-block;
+  margin-top: 20px;
+}

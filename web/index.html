@@ -13,6 +13,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
     <!-- Custom Js -->
     <script type="text/javascript" src="js/main.js"></script>
 
@@ -25,22 +28,25 @@
 <body>
 
 <div class="container">
-  <div class="row">
     <div class="col-lg-12">
-      <div class="col-lg-8">
 
-          <h1>HoT Integration</h1>
+      <div class="row">
 
-          <button type="button" class="btn btn-info" onClick="refresh();">Update</button>
+        <h1>HoT lights status report</h1>
 
-      <div class="col-lg-4">
-          <h1 id="light-status">ON</h1>
-          <img class="featurette-image img-responsive pull-left" src="resources/lampON.png">
+        <div class="content col-lg-4">
+
+          <h3 id="light-status">ON</h3>
+          <img class="lamp img-responsive center" id="on" src="resources/lampON.png">
+          <img class="lamp img-responsive center" id="off" src="resources/lampOFF.png" style="display: none;">
+
+          <button type="button" class="update btn btn-info" onClick="refresh();">Update</button>
+
+        </div>
+
       </div>
     </div>
-      </div>
-    </div>
-</div>
+  </div>
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
