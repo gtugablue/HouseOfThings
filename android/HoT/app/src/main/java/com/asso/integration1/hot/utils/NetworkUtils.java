@@ -13,7 +13,7 @@ import java.net.URLConnection;
 
 public class NetworkUtils {
 
-    private static final String THINGS_URL = "https://boleias.000webhostapp.com/get.php";
+    private static final String THINGS_URL = "https://asso-hot.herokuapp.com/api/third-party/android";
 
     public static void getStatus(final int requestCode, final NetworkCallback callback) {
         httpGetBoolean(THINGS_URL, requestCode, callback);
